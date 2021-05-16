@@ -11,7 +11,7 @@ function loadPlaces(position) {
 
     // Foursquare API (limit param: number of maximum places to fetch)
     const endpoint = `${corsProxy}https://api.foursquare.com/v2/venues/search?intent=checkin
-        &ll=22.685634,72.875817
+        &ll=${position.latitude},${position.longitude}
         &radius=${params.radius}
         &client_id=${params.clientId}
         &client_secret=${params.clientSecret}
