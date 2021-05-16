@@ -1,8 +1,8 @@
 function loadPlaces(position) {
     const params = {
         radius: 300,    // search places not farther than this value (in meters)
-        clientId: '<YOUR-CLIENT-ID>',
-        clientSecret: 'YOUR-CLIENT-SECRET',
+        clientId: '2HEAUNR5PLD5LVMQMNHYAN2TS1XQBSJPA1UI0OSDTPNQ5BRL',
+        clientSecret: 'FQSVHMBPNMHBGX5QCRYCDSSOEHJE25OC110D4OYWYW33OMS0',
         version: '20300101',    // foursquare versioning, required but unuseful for this demo
     };
 
@@ -11,7 +11,7 @@ function loadPlaces(position) {
 
     // Foursquare API (limit param: number of maximum places to fetch)
     const endpoint = `${corsProxy}https://api.foursquare.com/v2/venues/search?intent=checkin
-        &ll=${position.latitude},${position.longitude}
+        &ll=22.685634,72.875817
         &radius=${params.radius}
         &client_id=${params.clientId}
         &client_secret=${params.clientSecret}
